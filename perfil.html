@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil do Usuário</title>
+    <link rel="stylesheet" href="/static/perfil.css">
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.js" integrity="sha384-ezjq8118wdwdRMj+nX4bevEi+cDLTbhLAeFF688VK8tPDGeLUe0WoY2MZtSla72F" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card perfil-card">
+        <h2>Meu Perfil</h2>
+        <form id="username-form"
+            hx-put="/username"
+            hx-on::after-request="if(event.detail.xhr.status==200) alert('Nome alterado com sucesso!')"
+            hx-swap="none"
+        >
+            <div class="user-info">
+                
+                    <div class="info-row">
+                        <span>Nome de usuário:</span>
+                        <input type="text" name="username" id="username" value="{{ username }}">
+                    </div>
+                
+
+                <div class="info-row">
+                    <span>Email:</span>
+                    <input type="email" id="email" value="{{ email }}" disabled>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button 
+                    type="submit"
+                    class="update-btn"
+                    
+                >Alterar Nome</button>
+                <button 
+                class="delete-btn"
+                hx-delete="/delete-account"
+                hx-swap="none"
+                hx-confirm="Tem certeza que deseja deletar sua conta?"
+                hx-on::after-request="window.location.href='/login'"
+                >Deletar Conta</button>
+            </div>
+        </form>
+
+        <div id="mensagem"></div>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh 2vw;
+}
+
+.register-container {
+    background-color: #1e1e1e;
+    padding: 5vh 4vw;
+    border-radius: 1vw;
+    box-shadow: 0 1vh 2vh rgba(0,0,0,0.5);
+    width: 90vw;
+    max-width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-container h1 {
+    margin-bottom: 3vh;
+    font-size: 3vw;
+    color: #ffffff;
+}
+
+.register-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form label {
+    margin-bottom: 0.5vh;
+    font-size: 1.2vw;
+}
+
+.register-form input {
+    padding: 1.5vh 1vw;
+    margin-bottom: 2vh;
+    border-radius: 0.8vw;
+    border: 0.2vw solid #333;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 1.2vw;
+}
+
+.register-form input:focus {
+    outline: none;
+    border-color: #555;
+}
+
+.register-form button {
+    padding: 1.5vh 1vw;
+    border-radius: 0.8vw;
+    border: 0.2vw solid #333;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.2vw;
+    transition: all 0.2s ease;
+}
+
+.register-form button:hover {
+    background-color: #444;
+    border-color: #555;
+}
+
+.mensagem {
+    margin-top: 2vh;
+    font-size: 1vw;
+}
+
+.mensagem a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.mensagem a:hover {
+    text-decoration: underline;
+}
+
+@media(orientation: portrait) {
+    body {
+        padding: 3vh 4vw;
+    }
+
+    .register-container {
+        padding: 6vh 6vw;
+        width: 95vw;
+    }
+
+    .register-container h1 {
+        font-size: 5vw;
+    }
+
+    .register-form label,
+    .register-form input,
+    .register-form button,
+    .mensagem {
+        font-size: 4vw;
+        padding: 2vh 2vw;
+        border-radius: 1.5vw;
+    }
+}
+
+@media(orientation: landscape) {
+    body {
+        padding: 2vh 6vw;
+    }
+
+    .register-container {
+        padding: 5vh 5vw;
+        width: 60vw;
+    }
+
+    .register-container h1 {
+        font-size: 3vw;
+    }
+
+    .register-form label,
+    .register-form input,
+    .register-form button,
+    .mensagem {
+        font-size: 1.5vw;
+        padding: 1.5vh 1vw;
+        border-radius: 1vw;
+    }
+}

@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+    background: #0f1117;
+    color: #e6e6e6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.page {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.total-card {
+    background: #151822;
+    padding: 14px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border: 1px solid #2c3140;
+}
+
+.total-card span {
+    font-size: 12px;
+    color: #8a90a2;
+}
+
+.total-card strong {
+    font-size: 20px;
+    color: #00ff9c;
+}
+
+.table-card {
+    background: #151822;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    border: 1px solid #2c3140;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 14px 16px;
+    font-size: 12px;
+    letter-spacing: .5px;
+    color: #8a90a2;
+    background: #11141d;
+}
+
+td {
+    padding: 16px;
+    border-top: 1px solid #2c3140;
+}
+
+tr {
+    transition: 0.15s;
+}
+
+tr:hover {
+    background: #1c2030;
+}
+
+.ticker {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.price {
+    color: #4da3ff;
+    font-weight: 600;
+}
+
+.value {
+    font-weight: 600;
+}
+
+.profit {
+    color: #00ff9c;
+    font-weight: 600;
+}
+
+.loss {
+    color: #ff4d6d;
+    font-weight: 600;
+}
+
+.sell-button {
+    background: #1f2433;
+    border: 1px solid #2c3140;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.sell-button:hover {
+    background: #2c3140;
+}
+
+@media (max-width: 900px) {
+
+    table {
+        font-size: 13px;
+    }
+
+    th, td {
+        padding: 12px;
+    }
+
+}
+
+@media(orientation: portrait){
+    tr {
+        height: 7vh;
+    }
+}
+
+
+

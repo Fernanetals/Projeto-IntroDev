@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+    background: #0f1117;
+    color: #e6e6e6;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+button {
+    background: #1a1d26;
+    color: white;
+    border: 1px solid #2c3140;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background: #222635;
+    border-color: #3a4154;
+}
+
+#tabela {
+    background: #1a1d26;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 14px 16px;
+    font-size: 13px;
+    color: #8a90a2;
+    background: #151822;
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 16px;
+    border-top: 1px solid #2c3140;
+}
+
+tr {
+    transition: 0.15s;
+}
+
+tr:hover {
+    background: #202432;
+}
+
+.ticker {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.price {
+    color: #00ff9c;
+    font-weight: 600;
+}
+
+.buy-button {
+    background: linear-gradient(135deg, #00ff9c, #00c3ff);
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.buy-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(0,255,156,0.25);
+}
+
+/* adicionar_form.css */
+
+/* Form container */
+.search-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Input de pesquisa */
+.search-form input[type="text"] {
+    flex: 1;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background-color: #1a1d26;
+    color: #e6e6e6;
+    font-size: 1rem;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+.search-form input[type="text"]::placeholder {
+    color: #7a7f8c;
+}
+
+.search-form input[type="text"]:focus {
+    outline: none;
+    border-color: #2f81f7;
+    box-shadow: 0 0 10px rgba(47, 129, 247, 0.4);
+}
+
+.search-form button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(135deg, #2f81f7, #1f6feb);
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.search-form button:hover {
+    background: linear-gradient(135deg, #1f6feb, #1462d1);
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(47, 129, 247, 0.3);
+}
+
+/* Responsivo */
+@media screen and (max-width: 480px) {
+    .search-form {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .search-form button {
+        width: 100%;
+    }
+}
+
+.header-icons {
+    position: absolute;
+    top: 20px;
+    right: 70px; 
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.perfil-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2f81f7;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.perfil-icon:hover {
+    background-color: #1f6feb;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.user-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    gap: 6px;
+    
+}

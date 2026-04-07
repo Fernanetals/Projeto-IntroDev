@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adicionar ações</title>
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.js" integrity="sha384-ezjq8118wdwdRMj+nX4bevEi+cDLTbhLAeFF688VK8tPDGeLUe0WoY2MZtSla72F" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/adicionar.css">
+</head>
+<body>
+    <div class="header-icons">
+        
+        <a href="/perfil" class="user-link" title="Perfil do usuário">
+            <p class="username">{{ username }}</p> 
+            <span class="perfil-icon">👤</span>
+        </a>
+    </div>
+
+<h1>Adicionar ações</h1>
+
+<form class="search-form" hx-get="/search" hx-target="#tabela" hx-swap="innerHTML">
+    <input 
+        type="text" 
+        placeholder="Pesquisar ação..." 
+        name="query"
+        hx-get  ="/acoes"          
+        hx-target="#tabela"       
+        hx-swap="innerHTML"       
+        hx-trigger="keyup changed delay:500ms"  
+        autocomplete="off"
+    >
+    <button type="submit">Buscar na Bolsa</button>
+</form>
+
+<div hx-get="/search?query=" hx-target="#tabela" hx-trigger="load">
+
+
+</div>
+
+<div id="tabela"></div>
+
+
+
+</body>
+</html>

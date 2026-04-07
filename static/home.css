@@ -1,0 +1,225 @@
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: #0f1117;
+    color: #e6e6e6;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media(orientation: landscape){
+    .container {
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .card {
+        background-color: #1a1d25;
+        padding: 4vh;
+        border-radius: 12px;
+        width: 35vw;
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+        margin: 0;
+        text-align: center;
+    }
+
+    .descricao {
+        text-align: center;
+        line-height: 1.5;
+        color: #b8bcc8;
+    }
+
+    .botoes {
+        display: flex;
+        justify-content: center;
+        gap: 5vw;
+    }
+
+    .botao {
+        text-decoration: none;
+        background-color: #2f81f7;
+        color: white;
+        padding: 12px 18px;
+        border-radius: 8px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: 0.2s;
+    }
+
+    .botao:hover {
+        background-color: #1f6feb;
+    }
+
+    .logout-form {
+        position: absolute; 
+        top: 5vh;
+        right: 5vw;
+        display: inline-block; 
+    }
+
+    .logout-button {
+        background: linear-gradient(135deg, #ff4d6d, #ff7a7a);
+        border: none;
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: 0.2s;
+        width: 15vw;
+        font-size: 2vw;
+        height: 7vh;
+        margin-top: 5vh;
+    }
+
+    .logout-button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 15px rgba(255,77,109,0.3);
+    }
+}
+
+@media(orientation: portrait){
+    .container {
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .card {
+        background-color: #1a1d25;
+        padding: 4vh;
+        border-radius: 12px;
+        width: 60vw;
+        height: 40vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+        margin: 0;
+        text-align: center;
+        font-size: 5vw;
+    }
+
+    .descricao {
+        text-align: center;
+        font-size: 3vw;
+        color: #b8bcc8;
+    }
+
+    .botoes {
+        display: flex;
+        justify-content: center;
+        gap: 5vw;
+        margin-bottom: 2vh;
+    }
+
+    .botao {
+        text-decoration: none;
+        background-color: #2f81f7;
+        color: white;
+        padding: 2vw 3vw;
+        border-radius: 8px;
+        font-weight: bold;
+        width: 15vw;
+        height: 4vh;
+        font-size: 2vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: 0.2s;
+    }
+
+    .botao:hover {
+        background-color: #1f6feb;
+    }
+
+    .logout-form {
+        position: absolute; 
+        top: 5vh;
+        right: 5vw;
+        display: inline-block; 
+    }
+
+    .logout-button {
+        background: linear-gradient(135deg, #ff4d6d, #ff7a7a);
+        border: none;
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 3vh;
+        transition: 0.2s;
+        width: 30vw;
+        height: 7vh;
+        margin-top: 5vh;
+    }
+
+    .logout-button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 15px rgba(255,77,109,0.3);
+    }
+}
+
+
+.header-icons {
+    position: absolute;
+    top: 5vh;
+    right: 5vw; 
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.perfil-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2f81f7;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.perfil-icon:hover {
+    background-color: #1f6feb;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.user-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    gap: 6px;
+    font-size: 2vw;
+}
+

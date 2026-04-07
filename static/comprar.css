@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    background: #0f1117;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+    color: white;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.card {
+    background: #1a1d26;
+    padding: 40px;
+    border-radius: 14px;
+    width: 420px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticker {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 22px;
+    color: #00ff9c;
+    font-weight: bold;
+}
+
+
+.divider {
+    height: 1px;
+    background: #2c3140;
+}
+
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info-box span {
+    color: #8a90a2;
+    font-size: 13px;
+}
+
+.info-box strong {
+    font-size: 16px;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form label {
+    font-size: 14px;
+    color: #8a90a2;
+}
+
+.form input {
+    background: #0f1117;
+    border: 1px solid #2c3140;
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+}
+
+.form input:focus {
+    outline: none;
+    border-color: #00ff9c;
+}
+
+/* TOTAL */
+
+.total {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.total span {
+    color: #00ff9c;
+    font-weight: bold;
+}
+
+
+.buy-button {
+    margin-top: 10px;
+    background: linear-gradient(135deg, #00ff9c, #00c3ff);
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.buy-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,255,156,0.2);
+}
+
+
+#mensagem {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.header-icons {
+    position: absolute;
+    top: 20px;
+    right: 70px; 
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.perfil-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2f81f7;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.perfil-icon:hover {
+    background-color: #1f6feb;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.user-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    gap: 6px;
+    
+}

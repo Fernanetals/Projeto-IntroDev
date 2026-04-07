@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro - Simulador de Investimentos</title>
+    <link rel="stylesheet" href="/static/cadastro.css">
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.js" integrity="sha384-ezjq8118wdwdRMj+nX4bevEi+cDLTbhLAeFF688VK8tPDGeLUe0WoY2MZtSla72F" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="register-container">
+    <h1>Cadastre-se</h1>
+    
+    <form class="register-form" hx-post="/cadastro" hx-target="#mensagem" hx-swap="innerHTML">
+        <input type="text" name="username" placeholder="Nome de usuário" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="senha" placeholder="Senha" required>
+        <button>Cadastrar</button>
+    </form>
+
+    <div id="mensagem"></div>
+
+    <p class="mensagem">Já tem uma conta? <a href="/login">Entre aqui</a></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh 2vw;
+}
+
+.login-container {
+    background-color: #1e1e1e;
+    padding: 5vh 4vw;
+    border-radius: 1vw;
+    box-shadow: 0 1vh 2vh rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-container h1 {
+    margin-bottom: 3vh;
+    font-size: 3vw;
+    color: #ffffff;
+}
+
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form input {
+    padding: 1.5vh 1vw;
+    margin-bottom: 2vh;
+    border-radius: 0.8vw;
+    border: 0.2vw solid #333;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 1.2vw;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: #555;
+}
+
+.login-form button {
+    padding: 1.5vh 1vw;
+    border-radius: 0.8vw;
+    border: 0.2vw solid #333;
+    background-color: #2a2a2a;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2vw;
+    transition: all 0.2s ease;
+}
+
+.login-form button:hover {
+    background-color: #444;
+    border-color: #555;
+}
+
+.mensagem {
+    margin-top: 2vh;
+    font-size: 1vw;
+}
+
+.mensagem a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.mensagem a:hover {
+    text-decoration: underline;
+}
+
+#resposta {
+    margin-top: 1vh;
+    font-size: 1vw;
+    text-align: center;
+}
+
+@media(orientation: portrait) {
+    body {
+        padding: 3vh 4vw;
+    }
+
+    .login-container {
+        padding: 6vh 6vw;
+        width: 95vw;
+    }
+
+    .login-container h1 {
+        font-size: 5vw;
+    }
+
+    .login-form input,
+    .login-form button,
+    .mensagem,
+    #resposta {
+        font-size: 4vw;
+        padding: 2vh 2vw;
+        border-radius: 1.5vw;
+    }
+}
+
+@media(orientation: landscape) {
+    body {
+        padding: 2vh 6vw;
+    }
+
+    .login-container {
+        padding: 5vh 5vw;
+        width: 50vw;
+    }
+
+    .login-container h1 {
+        font-size: 3vw;
+    }
+
+    .login-form input,
+    .login-form button,
+    .mensagem,
+    #resposta {
+        font-size: 1.5vw;
+        padding: 1.5vh 1vw;
+        border-radius: 1vw;
+    }
+}

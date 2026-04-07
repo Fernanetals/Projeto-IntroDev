@@ -1,0 +1,44 @@
+<table>
+    <thead>
+        <tr>
+            <th>Ticker</th>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for acao in acoes %}
+        <tr>
+            <td class="ticker">
+            {{ acao.ticker }}
+            </td>
+
+            <td>
+            {{ acao.nome }}
+            </td>
+
+            <td class="price">
+            R$ {{ acao.preco }}
+            </td>
+
+            <td>
+                <form action="/comprar/{{ acao.ticker }}" method="get">
+                    <button type="submit" class="botao">Comprar</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+<div class="pagination">
+    {% if page > 1 %}
+        <button hx-get="/search?query={{ query }}&page={{ page-1 }}" hx-target="#tabela">Anterior</button>
+    {% endif %}
+    <span>Página {{ page }}</span>
+    {% if acoes|length == 5 %}
+        <button hx-get="/search?query={{ query }}&page={{ page+1 }}" hx-target="#tabela">Próxima</button>
+    {% endif %}
+</div>

@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a1d25, #0f1117);
+    color: #e6e6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.card {
+    background-color: #1f222b;
+    padding: 40px 30px;
+    border-radius: 12px;
+    width: 400px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.perfil-card h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-row span {
+    font-size: 14px;
+    color: #b8bcc8;
+    margin-bottom: 5px;
+}
+
+.info-row input {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #2a2e38;
+    color: #fff;
+    font-size: 16px;
+}
+
+.info-row input:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.update-btn {
+    flex: 1;
+    padding: 12px 0;
+    background-color: #2f81f7;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.update-btn:hover {
+    background-color: #1f6feb;
+}
+
+.delete-btn {
+    flex: 1;
+    padding: 12px 0;
+    background-color: #ff4d6d;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.delete-btn:hover {
+    background-color: #ff2a4a;
+}
+
+#mensagem {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
