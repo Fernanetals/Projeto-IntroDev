@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulador de Investimentos</title>
+    <link rel="stylesheet" href="/static/home.css">
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.js" integrity="sha384-ezjq8118wdwdRMj+nX4bevEi+cDLTbhLAeFF688VK8tPDGeLUe0WoY2MZtSla72F" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-icons">
+        
+        <a href="/perfil" class="user-link" title="Perfil do usuário">
+            <p class="username">{{ username }}</p> 
+            <span class="perfil-icon">👤</span>
+        </a>
+    </div>
+
+    <div class="card">
+        <h1>Simulador de Investimentos</h1>
+
+        <p class="descricao">
+            Bem-vindo ao simulador de investimentos. 
+            Aqui você pode montar sua carteira de ações, acompanhar 
+            o rendimento ao longo do tempo e analisar o desempenho 
+            dos seus investimentos de forma simples.
+        </p>
+
+        <div class="botoes">
+            <a href="/adicionar" class="botao">
+                Adicionar Ações
+            </a>
+
+            <a href="/carteira" class="botao">
+                Ver Carteira
+            </a>
+        </div>
+
+    </div>
+
+    <button hx-post="/logout" type="submit" class="logout-button">
+    Sair
+    </button>
+
+</div>
+
+
+
+
+</body>
+</html>

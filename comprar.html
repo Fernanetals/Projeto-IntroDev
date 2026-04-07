@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Comprar Ação</title>
+<script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.js" integrity="sha384-ezjq8118wdwdRMj+nX4bevEi+cDLTbhLAeFF688VK8tPDGeLUe0WoY2MZtSla72F" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/static/comprar.css">
+</head>
+
+<body>
+    <div class="header-icons">
+        
+        <a href="/perfil" class="user-link" title="Perfil do usuário">
+            <p class="username">{{ username }}</p> 
+            <span class="perfil-icon">👤</span>
+        </a>
+    </div>
+    <div class="page">
+
+        <div class="card">
+
+            <div class="header">
+                <div class="ticker">{{ ticker }}</div>
+                <div class="price">R$ {{ preco }}</div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="info">
+
+                <div class="info-box">
+                    <span>Preço atual</span>
+                    <strong>R$ {{ preco }}</strong>
+                </div>
+
+                <div class="info-box">
+                    <span>Tipo</span>
+                    <strong>Compra</strong>
+                </div>
+
+            </div>
+            <input type="hidden" id="preco" value="{{ preco }}">
+            <form 
+                hx-post="/comprar"
+                hx-target="#mensagem"
+                hx-swap="innerHTML"
+                class="form"
+            >
+
+                <input type="hidden" name="ticker" value="{{ ticker }}">
+
+                <label>Quantidade</label>
+
+                <input 
+                type="number"
+                id="quantidade"
+                name="quantidade"
+                min="1"
+                value="1"
+                required
+                >
+
+                <div class="total">
+                    Total: <span id="total">R$ {{ preco }}</span>
+                </div>
+
+                <button type="submit" class="buy-button">
+                Comprar
+                </button>
+
+            </form>
+                
+
+            <div id="mensagem"></div>
+
+        </div>
+
+</div>
+
+<script>
+    const quantidade = document.getElementById("quantidade")
+    const preco = document.getElementById("preco")
+    const total = document.getElementById("total")
+
+    quantidade.addEventListener("input", () => {
+        const q = parseFloat(quantidade.value || 0)
+        const p = parseFloat(preco.value || 0)
+
+        const t = (q * p).toFixed(2)
+
+        total.innerText = "R$ " + t
+    })
+</script>
+
+</body>
+</html>

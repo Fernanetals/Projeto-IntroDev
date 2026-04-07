@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Simulador de Investimentos</title>
+    <link rel="stylesheet" href="/static/login.css">
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.js" integrity="sha384-ezjq8118wdwdRMj+nX4bevEi+cDLTbhLAeFF688VK8tPDGeLUe0WoY2MZtSla72F" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="login-container">
+    <h1>Entrar</h1>
+
+    <form class="login-form" hx-post="/login" hx-target="#resposta" hx-swap="innerHTML">
+        <input type="text" name="username" placeholder="Nome de usuário" required>
+        <input type="password" name="senha" placeholder="Senha" required>
+        <button>Entrar</button>
+    </form>
+
+    <div id="resposta"></div>
+
+    <p class="mensagem">Ainda não tem conta? <a href="/cadastro">Cadastre-se</a></p>
+</div>
+
+</body>
+</html>

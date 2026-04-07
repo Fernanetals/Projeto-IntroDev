@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+
+<title>Carteira</title>
+
+<script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8"></script>
+
+<link rel="stylesheet" href="/static/carteira.css">
+</head>
+
+<body>
+    <div class="page">
+        
+
+        <div class="header">
+            <h1>Sua Carteira</h1>
+
+            <div class="total-card">
+                <span>Valor Total</span>
+                <strong>R$ {{ total }}</strong>
+            </div>
+        </div>
+
+        <div class="table-card">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Ativo</th>
+                        <th>Quantidade</th>
+                        <th>Preço Médio</th>
+                        <th>Preço Atual</th>
+                        <th>Valor</th>
+                        <th>Rendimento</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {% for pos in carteira %}
+                    <tr>
+
+                        <td class="ticker">
+                        {{ pos.ticker }}
+                        </td>
+
+                        <td>
+                        {{ pos.quantidade }}
+                        </td>
+
+                        <td>
+                        R$ {{ pos.preco_medio }}
+                        </td>
+
+                        <td class="price">
+                        R$ {{ pos.preco_atual }}
+                        </td>
+
+                        <td class="value">
+                        R$ {{ pos.valor }}
+                        </td>
+
+                        <td class="{% if pos.rendimento >= 0 %}profit{% else %}loss{% endif %}">
+                        R$ {{ pos.rendimento }}
+                        </td>
+
+                        <td>
+                            <button 
+                                class="sell-button"
+                                hx-get="/vender/{{ pos.ticker }}"
+                                hx-target="body"
+                                hx-push-url="true"
+                            >
+                            Vender
+                            </button>
+                        </td>
+
+                    </tr>
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
