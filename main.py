@@ -22,11 +22,15 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Certifique-se de que a pasta dos templates existe
-templates = Jinja2Templates(directory=".")
+templates = Jinja2Templates(directory="templates")
 
 @app.on_event("startup")
 def on_startup():
     SQLModel.metadata.create_all(engine)
+
+@app.get("/", response_class=HTMLResponse)
+async def root(request: Request):
+    return RedirectResponse(url="/login")
 
 @app.get("/login", response_class=HTMLResponse)
 async def login(request: Request):

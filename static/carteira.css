@@ -5,13 +5,13 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background: #0f1117;
     color: #e6e6e6;
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    padding: 40px 20px;
+    padding: 2rem 1rem;
 }
 
 .page {
@@ -19,64 +19,69 @@ body {
     max-width: 1100px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 h1 {
-    font-size: 28px;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 600;
 }
 
 .total-card {
     background: #151822;
-    padding: 14px 20px;
-    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    border-radius: 0.75rem;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 0.25rem;
     border: 1px solid #2c3140;
+    min-width: 150px;
+    text-align: right;
 }
 
 .total-card span {
-    font-size: 12px;
+    font-size: 0.875rem;
     color: #8a90a2;
 }
 
 .total-card strong {
-    font-size: 20px;
+    font-size: 1.25rem;
     color: #00ff9c;
 }
 
 .table-card {
     background: #151822;
-    border-radius: 12px;
+    border-radius: 0.75rem;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    box-shadow: 0 1.25rem 3.75rem rgba(0,0,0,0.5);
     border: 1px solid #2c3140;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    font-size: 0.875rem;
 }
 
 th {
     text-align: left;
-    padding: 14px 16px;
-    font-size: 12px;
-    letter-spacing: .5px;
+    padding: 0.75rem 1rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
     color: #8a90a2;
     background: #11141d;
 }
 
 td {
-    padding: 16px;
+    padding: 1rem;
     border-top: 1px solid #2c3140;
 }
 
@@ -90,7 +95,7 @@ tr:hover {
 
 .ticker {
     font-weight: 600;
-    font-size: 15px;
+    font-size: 0.875rem;
 }
 
 .price {
@@ -116,10 +121,11 @@ tr:hover {
     background: #1f2433;
     border: 1px solid #2c3140;
     color: white;
-    padding: 6px 14px;
-    border-radius: 6px;
+    padding: 0.5rem 0.875rem;
+    border-radius: 0.5rem;
     cursor: pointer;
     transition: 0.2s;
+    font-size: 0.875rem;
 }
 
 .sell-button:hover {
@@ -127,22 +133,32 @@ tr:hover {
 }
 
 @media (max-width: 900px) {
-
     table {
-        font-size: 13px;
+        font-size: 0.75rem;
     }
 
     th, td {
-        padding: 12px;
+        padding: 0.5rem 0.75rem;
     }
 
-}
+    .total-card {
+        text-align: left;
+        min-width: auto;
+    }
 
-@media(orientation: portrait){
-    tr {
-        height: 7vh;
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
+@media (max-width: 600px) {
+    h1 {
+        font-size: clamp(1.25rem, 5vw, 1.5rem);
+    }
 
-
+    .sell-button {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.75rem;
+    }
+}

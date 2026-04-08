@@ -113,26 +113,133 @@ body {
     }
 }
 
-@media(orientation: landscape) {
-    body {
-        padding: 2vh 6vw;
-    }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.register-container {
+    background-color: #1e1e1e;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.5);
+    width: 400px;
+    max-width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-container h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.register-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form label {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.register-form input {
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #333;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.register-form input:focus {
+    outline: none;
+    border-color: #555;
+}
+
+.register-form button {
+    padding: 0.8rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #333;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.register-form button:hover {
+    background-color: #444;
+    border-color: #555;
+}
+
+.mensagem {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.mensagem a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.mensagem a:hover {
+    text-decoration: underline;
+}
+
+@media (orientation: portrait) {
     .register-container {
-        padding: 5vh 5vw;
-        width: 60vw;
+        width: 95%;
+        padding: 2.5rem;
     }
 
     .register-container h1 {
-        font-size: 3vw;
+        font-size: 2.5rem;
     }
 
     .register-form label,
     .register-form input,
     .register-form button,
     .mensagem {
-        font-size: 1.5vw;
-        padding: 1.5vh 1vw;
-        border-radius: 1vw;
+        font-size: 1.2rem;
+        padding: 1rem;
+        border-radius: 0.8rem;
+    }
+}
+
+@media (orientation: landscape) {
+    .register-container {
+        width: 400px;
+        padding: 2rem;
+    }
+
+    .register-container h1 {
+        font-size: 2rem;
+    }
+
+    .register-form label,
+    .register-form input,
+    .register-form button,
+    .mensagem {
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+        border-radius: 0.5rem;
     }
 }

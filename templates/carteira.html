@@ -7,7 +7,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8"></script>
 
-<link rel="stylesheet" href="/static/carteira.css">
+<link rel="stylesheet" href="/static/carteira.css?v=1">
 </head>
 
 <body>
@@ -68,16 +68,6 @@
                         R$ {{ pos.rendimento }}
                         </td>
 
-                        <td>
-                            <button 
-                                class="sell-button"
-                                hx-get="/vender/{{ pos.ticker }}"
-                                hx-target="body"
-                                hx-push-url="true"
-                            >
-                            Vender
-                            </button>
-                        </td>
 
                     </tr>
                     {% endfor %}

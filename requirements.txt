@@ -1,1 +1,5 @@
 fastapi[standard]
+requests
+sqlmodel
+jinja2
+bcrypt

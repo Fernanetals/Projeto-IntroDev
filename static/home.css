@@ -81,7 +81,7 @@ body {
         font-weight: 600;
         transition: 0.2s;
         width: 15vw;
-        font-size: 2vw;
+        font-size: 1vw;
         height: 7vh;
         margin-top: 5vh;
     }
@@ -170,7 +170,7 @@ body {
         border-radius: 8px;
         cursor: pointer;
         font-weight: 600;
-        font-size: 3vh;
+        font-size: 2vh;
         transition: 0.2s;
         width: 30vw;
         height: 7vh;
